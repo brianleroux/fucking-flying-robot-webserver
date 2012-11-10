@@ -3,11 +3,12 @@ var emitStream = require('emit-stream')
 ,   JSONStream = require('JSONStream')
 ,   stream = net.connect(5555).pipe(JSONStream.parse([true]))
 ,   ev = emitStream(stream)
-,   client = require('ar-drone')
+,   client = require('ar-drone').createClient()
 ,   c = 'takeoff land up down clockwise counterClockwise front back left right stop disableEmergency'.split(' ')
 
 ev.on('cmd', function (cmd) {
-    // client[cmd.method](cmd.args)
+    if (client.hasOwnProperty(cmd.method) && cmd.args != undefined)
+        client[cmd.method](cmd.args)
     console.log(cmd)
 })
 
