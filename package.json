@@ -1,0 +1,22 @@
+{
+  "name": "fucking-flying-robot-webserver",
+  "version": "0.1.0",
+  "description": "its a fucking flying robot webserver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/brianleroux/fucking-flying-robot-webserver"
+  },
+  "keywords": [
+    "robot",
+    "webserver",
+    "fucking",
+    "ardrone",
+    "parrot"
+  ],
+  "author": "brianleroux",
+  "license": "Apache2"
+}
